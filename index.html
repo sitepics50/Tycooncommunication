@@ -30,16 +30,19 @@
  </style>
  
  
- 
- 
-  <div style="width:100%; height:100%; position:fixed;top:0%;right:0%;"><div id="rt-ddbf6678869d80608818cf3b5b926dfd"></div> <script src="https://rumbletalk.com/client/?5flzMDXL"></script></div>
- 
+ <div id="balance"><iframe class="iframe" src="ab.html"></iframe></div>
  
 
- <div style="background:#8DB600; position: fixed;width:40%; height:50px;right:0%; top:0%;box-sizing:border-shadow;"></div>
  
  
  
+ 
+<!-- <div class="nav-dots">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+ -->
  
  
  <!-- <div style="height:23%;right:10%;width:9%;font-size:50px; position:fixed;top:0%;">🇺🇸</div>  
@@ -47,7 +50,13 @@
  
  
     
- <a href="main.html"><div style="font-size:28px;height:10%;color: white; position:fixed;top:0%;right:7%;">&#9777</div></a>    
+ 
+     
+     
+     
+     
+     
+     <!-- <div style="font-size:28px;height:10%;color: white; position:fixed;top:0%;right:7%;">&#9777</div> -->    
     
    
    
@@ -98,7 +107,7 @@ const apkDownloadLink = document.getElementById('apk-download-link');
 // Check if popup has been dismissed
 if (!localStorage.getItem('popupDismissed')) {
   // Show popup after 30 seconds
-  setTimeout(() => {
+  (() => {
     popup.style.display = 'block';
   }, 3000);
 }
