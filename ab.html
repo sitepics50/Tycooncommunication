@@ -5,6 +5,11 @@
   
    
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no"> 
+ 
+ 
+<link rel="stylesheet" href="main.css">
+
+ 
    
 </head>
 <body style="background:black;">
@@ -100,6 +105,46 @@
 </div>
 
 <div class="popup-message">Congratulations! You can now monetize, go to monetization for more.</div>
+
+
+
+
+
+
+<div class="popup" id="popup">
+ 
+<div id="fullwidth">
+
+   <img src="ios.png" alt="iOS">
+  <button class="black" id="download-ios">Download for Iphone</button>
+  <img src="android.png" alt="APK">
+  <button class="green" id="download-android">Download for Android</button>
+</div>
+</div>
+
+
+<script>
+document.getElementById('download-ios').addEventListener('click', function() {
+  document.getElementById('popup').style.display = 'none';
+  localStorage.setItem('popup_displayed', 'true');
+});
+
+document.getElementById('download-android').addEventListener('click', function() {
+  window.location.href = 'Tycomm.apk';
+});
+
+window.onload = function() {
+  if (localStorage.getItem('popup_displayed') === 'true') {
+    document.getElementById('popup').style.display = 'none';
+  } else {
+    document.getElementById('popup').style.display = 'block';
+  }
+};
+</script>
+
+
+
+
 
 
 
@@ -206,6 +251,9 @@ position: fixed;
 </style>
 
    
+    
+    
+    
     
     
     
