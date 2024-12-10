@@ -27,12 +27,57 @@
      a {
          text-decoration:none;
      }
+     
+     
+     
  </style>
  
  
  <div id="balance"><iframe class="iframe" src="ab.html"></iframe></div>
  
 
+ 
+ <style>
+</style>
+</head>
+<body>
+
+<div class="popup" id="popup">
+ 
+<div id="fullwidth">
+
+   <img src="ios.png" alt="iOS">
+  <button class="black" id="download-ios">Download for Iphone</button>
+  <img src="android.png" alt="APK">
+  <button class="green" id="download-android">Download for Android</button>
+</div>
+</div>
+
+
+<script>
+document.getElementById('download-ios').addEventListener('click', function() {
+  document.getElementById('popup').style.display = 'none';
+  localStorage.setItem('popup_displayed', 'true');
+});
+
+document.getElementById('download-android').addEventListener('click', function() {
+  window.location.href = 'Tycomm.apk';
+});
+
+window.onload = function() {
+  if (localStorage.getItem('popup_displayed') === 'true') {
+    document.getElementById('popup').style.display = 'none';
+  } else {
+    document.getElementById('popup').style.display = 'block';
+  }
+};
+</script>
+
+
+
+ 
+ 
+ 
  
  
  
@@ -63,61 +108,6 @@
    
    
     
-    
- 
-<div style="position:fixed;" id="popup" class="popup">
- 
-  
- 
-  <div class="popup-content">
-  
-   
-    <div class="image-container">
-      
-     <label for="Iphone"style="margin-left:-75%;">Iphone</label>
-      <img style="margin-left:-80%;"src="ios.png" alt="IOS">
-      <button style="margin-left:-70%; background:black;"id="ios-image">Download</button>
-    </div>
-    <div class="image-container">
-     <label for="Android"style="margin-left:-10%;">Android</label>
-     
-      <img style="margin-left:-10%;"src="images.png" alt="APk">
-  
-  
-      <a href="Tycomm.apk" target="_blank"><button style="margin-left:-10%;"id="android-image">Download</button></a>
-    </div>
-  </div>
-</div>
-</div>
-
-
-<div id="apk-download-link" style="display: none;"></div>
-  
-
-
-
-
-<script>
-    
-   const popup = document.getElementById('popup');
-const iosImage = document.getElementById('ios-image');
-const androidImage = document.getElementById('android-image');
-const apkDownloadLink = document.getElementById('apk-download-link');
-
-// Check if popup has been dismissed
-if (!localStorage.getItem('popupDismissed')) {
-  // Show popup after 30 seconds
-  (() => {
-    popup.style.display = 'block';
-  }, 3000);
-}
-
-// Add event listeners to images
-iosImage.addEventListener('click', () => {
-  // Dismiss popup and set localStorage
-  popup.style.display = 'none';
-  localStorage.setItem('popupDismissed', true);
-});
 
 
 
@@ -132,9 +122,7 @@ androidImage.addEventListener('click', () => {
   popup.style.display = 'none';
 });
  -->     
-</script>
 
- 
 
  
  

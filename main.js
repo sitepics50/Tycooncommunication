@@ -14,3 +14,9 @@ faqQuestions.forEach((question) => {
     }
   });
 });
+
+
+
+//popup
+
+
