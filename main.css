@@ -30,16 +30,13 @@ background:;
   height:60%;
   border-radius:8px;
 }
-.popup button {
+
+.black {
   display: block;
   margin: auto;
   margin-bottom: 10px;
   padding: 10px;
-  width: 90%;
- height:25%;
-  cursor: pointer;
-}
-.popup button.black {
+  cursor:pointer;
   background: black;
   color: white;
   width:90%;
@@ -49,7 +46,12 @@ background:;
   border:none;
   border-radius:5px;
 }
-.popup button.green {
+.green {
+ display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor:pointer;
   background: green;
   color: white;
   width:90%;
@@ -177,3 +179,8 @@ flex-direction:column;
  }
 
 
+/* .popup button {
+  width: 90%;
+ height:25%;
+  cursor: pointer;
+} */
